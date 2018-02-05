@@ -1,0 +1,27 @@
+<div class="uk-container uk-container-small">
+  <h1>Listing all articles<div class="uk-float-right"><%= link_to "Create New Article", new_article_path, { :class=>"uk-button uk-button-primary uk-button-small" } %></div></h1>
+  
+
+  <table class="uk-table uk-table-hover uk-table-divider uk-table-small">
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Description</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @articles.each do |article| %>
+      <tr>
+        <td><%= article.title %></td>
+        <td><%= article.description %></td>
+        <td>
+          <%= link_to "Edit", edit_article_path(article[:id]), { :class=>"uk-button uk-button-default uk-button-small" } %>
+          <%= link_to "Show", article_path(article), { :class=>"uk-button uk-button-primary uk-button-small" } %>
+        </td>
+      </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+</div>
