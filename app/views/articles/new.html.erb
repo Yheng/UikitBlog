@@ -1,29 +1,6 @@
 <h1>Create New Article</h1>
 
-<% if @article.errors.any? %>
-  <span class="uk-label uk-label-danger">The following errors prevented the article being created.</span>
-  <ul class="uk-list">
-  <% @article.errors.full_messages.each do |msg| %>
-  <li> <%= msg %></li>
-  <% end %>
-  </ul>
-<% end %>
+# if the file is in different directory then you can do this: 
+# render 'shared/form'
 
-<%= form_for @article do |f| %>
-  <p>
-    <%= f.label :title %><br />
-    <%= f.text_field :title %>  
-  </p>
-  
-  <p>
-    <%= f.label :description %><br />
-    <%= f.text_area :description %>
-  </p>
-  
-  <p>
-    <%= f.submit %>
-  </p>
-  
-<% end %>  
-
-<%= link_to "Back to article listing", articles_path %>
+<%= render 'form' %>
