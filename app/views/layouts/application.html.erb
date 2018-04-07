@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>UikitBlog</title>
+    <title>Ariel BLog</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -9,8 +9,15 @@
   </head>
 
   <body>
+    <%= render 'layouts/navigation' %>
     <%= render 'layouts/messages' %>
     
-    <%= yield %>
+    <div class="container">
+      <div class="row">
+      <%= yield %>
+      </div>
+    </div>
+    
+    <%= render 'layouts/footer' %>
   </body>
 </html>

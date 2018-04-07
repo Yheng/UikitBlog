@@ -1,2 +1,72 @@
+$navbar-default-bg: #223F5E;
+
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+#logo {
+  color: #ffffff;  
+  font-size: 1.7em;
+  text-transform: uppercase;
+}
+
+#nav-fluid {
+  background: #223F5E;
+}
+
+.navbar {
+  border-radius: 0;
+}
+
+.navbar-default
+.navbar-nav > li > a {
+  color: #849DB5;
+} 
+
+.navbar-default
+.navbar-nav > li > a:hover {
+  color: #ffffff;
+}
+
+.navbar-default .navbar-nav > .open > a, 
+.navbar-default .navbar-nav > .open > a:hover, 
+.navbar-default .navbar-nav > .open > a:focus {
+  color: #405B7D;
+}
+
+.dropdown-menu > li > a:hover {
+  background: #223F5E;
+  color: #ffffff;
+}
+
+.jumbotron {
+  background-image: asset-url("home-hero.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #fff;
+}
+
+.jumbotron h1 {
+  color: #223F5E;
+  text-shadow: -2px 2px 1px #fff;
+}
+
+.jumbotron h3 {
+  color: #405B7D;
+  text-shadow: -1px 1px 0px #fff;
+}
+
+.footer {
+  border-top: 1px solid #ebebeb;
+  padding-top: 20px;
+}
+
+.footer nav ul li a {
+  text-decoration: none;
+  list-style: none;
+  float: right;
+}
+
+.footer nav ul li {
+  float: right;
+}
