@@ -1,10 +1,13 @@
-<h1>Showing selected article</h1>
+<h4>Showing selected article</h4>
 
-<p>Title: <%= @article.title %></p>
+<h1>Title: <%= @article.title %></h1>
 
-<p>
+<h3>
   Description: <%= @article.description %>
-</p>
+</h3>
 
-<%= link_to "Back to article listing", articles_path, { :class=>"uk-button uk-button-default uk-button-small" } %>
-<%= link_to "Edit", edit_article_path(@article), { :class=>"uk-button uk-button-default uk-button-small" } %>
+  <div class="col-xs-6 col-xs-offset-6">
+    <%= link_to "Back to article listing", articles_path, { :class=>"btn btn-default btn-sm" } %>
+    <%= link_to "Edit", edit_article_path(@article), { :class=>"btn btn-default btn-sm" } %>
+  </div>
+
