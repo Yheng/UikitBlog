@@ -1,0 +1,12 @@
+<% if obj.errors.any? %>
+  <div class="alert alert-danger alert-dismissible" role="alert">
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+    <strong><%= pluralize(obj.errors.count, "error") %></strong> prohibited this article from being saved:<br />
+    <ul class="uk-list">
+    <% obj.errors.full_messages.each do |msg| %>
+    <li> <%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+  
+<% end %>
